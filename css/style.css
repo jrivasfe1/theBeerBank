@@ -3,7 +3,10 @@
 }
 
 header {
-  background-color: #FF9100;
+  background-color: #F89900;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 
 nav {
@@ -15,6 +18,7 @@ nav {
   margin: 0;
   padding: 0;
   text-align: right;
+  margin-bottom: 12px;
 }
 
 .navigation__element, .navigation__element--active {
@@ -44,6 +48,7 @@ nav {
 .searchbar, .searchbar__text {
   text-align: center;
   color: #ffffff;
+  margin-bottom: 12px;
 }
 
 .searchbar__text--title {
@@ -56,7 +61,64 @@ nav {
 .searchbar__text--subtitle {
   color: #ffffff;
   margin: 0;
-  font-size: 12px;
+  font-weight: 600;
+}
+
+.searchbar__input {
+  margin-top: 12px;
+}
+
+.searchbar__input--bar {
+  width: 432px;
+  border: none;
+  height: 36px;
+  padding: 0 12px;
+}
+
+@media (max-width: 575.98px) {
+  .searchbar__input--bar {
+    width: 100%;
+  }
+}
+
+.beerlist {
+  background-color: #f8f8f8;
+  padding: 283px 0 72px 0;
+  display: block;
+}
+
+.beerlist .beer-card {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #fff;
+  -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  margin-bottom: 24px;
+}
+
+.beerlist .beer-card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
+}
+
+.beerlist .beer-card .beer-card__body {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.beerlist .beer-card .beer-card__body .beer-card__title {
+  font-size: 24px;
+  margin: 6px 0;
   font-weight: bold;
+  color: #F89900;
+}
+
+.beerlist .beer-card .beer-card__body .beer-card__description {
+  font-size: 16px;
+  color: #cacaca;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
