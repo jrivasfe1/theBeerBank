@@ -9,6 +9,10 @@ header {
   z-index: 999;
 }
 
+body {
+  background-color: #f8f8f8;
+}
+
 nav {
   width: 100%;
   padding: 24px 12px;
@@ -21,21 +25,24 @@ nav {
   margin-bottom: 12px;
 }
 
-.navigation__element, .navigation__element--active {
+.navigation__element,
+.navigation__element--active {
   display: inline-block;
   margin: 0 6px;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
-.navigation__element a, .navigation__element--active a {
+.navigation__element a,
+.navigation__element--active a {
   color: #f1f1f1;
   font-weight: 600;
   text-decoration: none;
   opacity: 0.9;
 }
 
-.navigation__element a:hover, .navigation__element--active a:hover {
+.navigation__element a:hover,
+.navigation__element--active a:hover {
   color: #ffffff;
   opacity: 1;
 }
@@ -45,7 +52,8 @@ nav {
   opacity: 1;
 }
 
-.searchbar, .searchbar__text {
+.searchbar,
+.searchbar__text {
   text-align: center;
   color: #ffffff;
   margin-bottom: 12px;
@@ -81,6 +89,10 @@ nav {
   }
 }
 
+.allBeers {
+  width: 100%;
+}
+
 .beerlist {
   background-color: #f8f8f8;
   padding: 283px 0 72px 0;
@@ -93,20 +105,33 @@ nav {
   background: #fff;
   -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
-  padding: 12px;
+  padding: 24px;
   margin-bottom: 24px;
+  height: 326px;
+  opacity: 0.9;
 }
 
 .beerlist .beer-card:hover {
+  opacity: 1;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
 }
 
+.beerlist .beer-card .beer-card__header {
+  text-align: center;
+  position: relative;
+}
+
+.beerlist .beer-card .beer-card__header .beer-card__img {
+  height: 150px;
+  margin-bottom: 24px;
+}
+
 .beerlist .beer-card .beer-card__body {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 36px;
 }
 
 .beerlist .beer-card .beer-card__body .beer-card__title {
@@ -114,6 +139,7 @@ nav {
   margin: 6px 0;
   font-weight: bold;
   color: #F89900;
+  height: 56px;
 }
 
 .beerlist .beer-card .beer-card__body .beer-card__description {
