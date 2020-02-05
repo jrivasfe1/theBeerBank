@@ -52,27 +52,108 @@
             <div class="container">
                 <div class="row row-flex" id="allBeers">
                     <!-- <div class="col-lg-4 col-md-6">
-                        <div class="beer-card">
-                            <div class="beer-card__header">
-                                <span class="beer-card__favorite"></span>
-                                <img class="beer-card__img"></img>
+                        <a href="">
+                            <div class="beer-card">
+                                <div class="beer-card__header">
+                                    <span class="beer-card__favorite beer-card__favorite--starOff">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                            <polygon points="12,3 6,21 21,9 3,9 18,21" />
+                                        </svg>
+                                    </span>
+                                    <img class="beer-card__img"></img>
+                                </div>
+                                <div class="beer-card__body">
+                                    <h4 class="beer-card__title">
+                                        Buzz
+                                    </h4>
+                                    <p class="beer-card__description">
+                                        A real bitter Experience
+                                    </p>
+                                </div>
                             </div>
-                            <div class="beer-card__body">
-                                <h4 class="beer-card__title">
-                                    Buzz
-                                </h4>
-                                <p class="beer-card__description">
-                                    A real bitter Experience
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </div> -->
-
                 </div>
-
             </div>
         </section>
     </main>
+
+    <div id="myModal" class="mymodal">
+        <div class="modal-content">
+            <div class="close">X</div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="img-modal">
+                        <img class="img-modal__beer" src="https://images.punkapi.com/v2/keg.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="name-and-tags">
+                        <h3 class="name-and-tag__beername">Lorem, ipsum dolor.</h3>
+                        <h4 class="name-and-tag__tag">Lorem ipsum dolor sit.</h4>
+                        <div class="name-and-tag__decal"></div>
+                        <div class="name-and-tag__values">
+                            <ul>
+                                <li class="ibu"><span>41.5</span></li>
+                                <li class="abv"></li>
+                                <li class="ebc"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="description-parragraf">
+                        <p class="description-parragraf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ad
+                            exercitationem saepe delectus sequi
+                            neque error. Voluptas laboriosam voluptate quos nulla optio obcaecati consectetur saepe
+                            perspiciatis sint. Quibusdam quae cumque nesciunt!</p>
+                        <p class="description-parragraf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Veritatis itaque laudantium dolorum
+                            soluta quos earum. Beatae ut impedit totam id doloremque harum, similique ipsam? Magnam
+                            provident sint iusto fugiat nam!</p>
+                    </div>
+                    <div class="food-pairing">
+                        <h4 class="food-pairing__title">Best served with lemon</h4>
+                        <ul>
+                            <li class="food-pairing__food">burritos and tacos</li>
+                            <li class="food-pairing__food">burritos and tacos</li>
+                            <li class="food-pairing__food">burritos and tacos</li>
+                            <li class="food-pairing__food">burritos and tacos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="also-like">
+                    <div class="col-md-12">
+                        <div class="you-may-like">
+                            <h4 class="you-may-like__title">
+                                You might also like
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="also-like__box">
+                            <img class="also-like__image" src="" alt="">
+                            <h5 class="also-like__name"></h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="also-like__box">
+                            <img class="also-like__image" src="" alt="">
+                            <h5 class="also-like__name"></h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="also-like__box">
+                            <img class="also-like__image" src="" alt="">
+                            <h5 class="also-like__name"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/propper.js"></script>

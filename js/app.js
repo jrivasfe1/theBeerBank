@@ -26,20 +26,26 @@ request.onreadystatechange = function () {
         col.classList.add("col-lg-4", "col-md-6");
         allBeers.appendChild(col);
         var beerCard =
-          '   <div class="beer-card">  ' +
-          '                               <div class="beer-card__header">  ' +
-          '                                   <span class="beer-card__favorite"></span>  ' +
-          '                                   <img class="beer-card__img" src=' + data[i].image_url + '></img>  ' +
-          '                               </div>  ' +
-          '                               <div class="beer-card__body">  ' +
-          '                                   <h4 class="beer-card__title">  ' +
-          data[i].name +
-          '                                   </h4>  ' +
-          '                                   <p class="beer-card__description">  ' +
-          data[i].tagline +
-          '                                   </p>  ' +
-          '                               </div>  ' +
-          '                          </div>  ';
+          '<a href=' + data[i].image_url + ' >' +
+          '<div class="beer-card">' +
+          '<div class="beer-card__header">' +
+          '<span class="beer-card__favorite beer-card__favorite--starOff">' +
+          '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
+          '<polygon points="12,3 6,21 21,9 3,9 18,21" />' +
+          '</svg>' +
+          '</span>' +
+          '<img class="beer-card__img" src=' +
+          data[i].image_url +
+          '></img>  ' +
+          '</div>  ' +
+          '<div class="beer-card__body">  ' +
+          '<h4 class="beer-card__title">  ' +
+          data[i].name + '</h4>' +
+          '<p class="beer-card__description">  ' +
+          data[i].tagline + '</p>' +
+          '</div>  ' +
+          '</div>  '; +
+        '</a>'
         col.innerHTML = beerCard;
         allBeers.appendChild(col);
       }
@@ -47,6 +53,7 @@ request.onreadystatechange = function () {
     addBeer();
   }
 };
+
 
 // event Listener, it detecs the scrolbar
 
