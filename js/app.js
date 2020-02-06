@@ -6,21 +6,22 @@ var request = new XMLHttpRequest();
 // "GET" links an object property with a function that will be called when its searched
 request.open('GET', 'https://api.punkapi.com/v2/beers');
 
+// empty global variable, this allows me, to use it at any moment. 
+var data = ""
+
 // sends the request to the server
 request.send();
 
-
 // investigate more about object and property
-request.onreadystatechange = function () {
-  // Return the state of an XMLHttpRequest, 4 means the operation iscomplete
-  if (request.readyState === 4) {
-    // Json.parse turn a text into an object
-    var data = JSON.parse(this.responseText);
-    // After Parse var=data is no an object
-    console.log(data);
-
-    // ---- this fucntion, loops thought the array, i is the index inside this array, arrayName[number] indicates, the position inside the array is an index -----
-    function addBeer() {
+function addBeer() {
+  request.onreadystatechange = function () {
+    // Return the state of an XMLHttpRequest, 4 means the operation iscomplete
+    if (request.readyState === 4) {
+      // Json.parse turn a text into an object, it will at to the global varible
+      data = JSON.parse(this.responseText);
+      // After Parse var=data is no an object
+      // console.log(data);
+      // ---- this fucntion, loops thought the array, i is the index inside this array, arrayName[number] indicates, the position inside the array is an index -----
       for (i = 0; i < 6; i++) {
         var col = document.createElement('div');
         col.classList.add("col-lg-4", "col-md-6");
@@ -50,9 +51,10 @@ request.onreadystatechange = function () {
         allBeers.appendChild(col);
       }
     }
-    addBeer();
-  }
-};
+  };
+}
+
+addBeer();
 
 
 // event Listener, it detecs the scrolbar

@@ -1,5 +1,5 @@
 * {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 header {
@@ -170,7 +170,7 @@ nav {
 .beerlist .beer-card .beer-card__favorite.beer-card__favorite--starOn polygon {
   fill: #f89900;
   stroke: #f89900;
-  opacity: 1.0;
+  opacity: 1;
   stroke-linejoin: round;
 }
 
@@ -219,9 +219,9 @@ nav {
 }
 
 .mymodal {
+  display: none;
   position: fixed;
   z-index: 999;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
@@ -237,13 +237,14 @@ nav {
   background-color: #fefefe;
   margin: auto;
   border: 1px solid #888;
-  width: 80%;
+  width: 60%;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
+  overflow-y: auto;
 }
 
 .mymodal .close {
@@ -253,6 +254,27 @@ nav {
   top: 12px;
   font-size: 20px;
   font-weight: bold;
+}
+
+.mymodal a {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mymodal a:hover {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mymodal a:hover .also-like__box {
+  border: 1px solid #f89900;
+}
+
+.mymodal a:hover .also-like__box .also-like__name {
+  font-weight: bold;
+  color: #f89900;
+  font-size: 24px;
 }
 
 .img-modal {
@@ -298,26 +320,26 @@ nav {
 
 .name-and-tags .name-and-tags__values ul li {
   display: inline-block;
-  color: #7C7C8F;
+  color: #7c7c8f;
   margin-right: 24px;
   font-size: 15px;
 }
 
 .description-parragraf .description-parragraf__text {
   font-size: 18px;
-  color: #7C7C8F;
+  color: #7c7c8f;
   margin-bottom: 12px;
 }
 
 .food-pairing .food-pairing__title {
-  color: #7C7C8F;
+  color: #7c7c8f;
   margin-bottom: 12px;
   font-size: 21px;
 }
 
 .food-pairing .food-pairing__list {
   font-size: 18px;
-  color: #7C7C8F;
+  color: #7c7c8f;
   margin-bottom: 12px;
 }
 
@@ -328,5 +350,23 @@ nav {
 .you-may-like .you-may-like__title {
   color: #f89900;
   font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.also-like__box {
+  border: 1px solid #d9d9d9;
+  text-align: center;
+  padding: 20px;
+}
+
+.also-like__box .also-like__image {
+  height: 200px;
+  margin-bottom: 24px;
+}
+
+.also-like__box .also-like__name {
+  font-weight: bold;
+  color: #7c7c8f;
+  font-size: 24px;
 }
 /*# sourceMappingURL=style.css.map */
