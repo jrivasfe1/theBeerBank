@@ -1,3 +1,26 @@
+// // Extra small devices (portrait phones, less than 576px)
+// // No media query for `xs` since this is the default in Bootstrap
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   ...
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   ...
+// }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//   ...
+// }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   ...
+// }
+
 // BEM practice
 
 $primary-color: #f89900;
@@ -101,7 +124,16 @@ nav {
   padding: 283px 0 72px 0;
   display: block;
 
-  a {
+  button {
+    width: 100%;
+    padding: 0;
+    border: none;
+    margin-bottom: 24px;
+
+    &:focus {
+      outline: none;
+    }
+
     &:hover {
       text-decoration: none;
     }
@@ -112,10 +144,14 @@ nav {
     background: #fff;
     box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
     padding: 24px;
-    margin-bottom: 24px;
     height: 326px;
     opacity: 0.9;
     position: relative;
+
+    button {
+      width: 100%;
+      display: block;
+    }
 
     &:hover {
       opacity: 1;
@@ -230,6 +266,18 @@ nav {
   }
 }
 
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
 .mymodal {
   display: none;
   position: fixed;
@@ -241,6 +289,8 @@ nav {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-out;
+  animation-name: animatetop;
 
   .modal-content {
     padding: 48px 24px;
@@ -255,6 +305,22 @@ nav {
     animation-name: animatetop;
     animation-duration: 0.4s;
     overflow-y: auto;
+    position: relative;
+
+    .close {
+      width: 12px;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+
+      img {
+        width: 12px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   .close {
@@ -265,13 +331,19 @@ nav {
     font-size: 20px;
     font-weight: bold;
   }
+
   a {
     transition: all 0.3s ease-out;
+
     &:hover {
       text-decoration: none;
       transition: all 0.3s ease-out;
+
       .also-like__box {
         border: 1px solid $primary-color;
+
+
+
         .also-like__name {
           font-weight: bold;
           color: $primary-color;
@@ -284,6 +356,10 @@ nav {
 
 .img-modal {
   text-align: center;
+
+  @media (max-width: 576px) {
+    margin: 12px 0;
+  }
 
   .img-modal__beer {
     height: 350px;
@@ -308,7 +384,7 @@ nav {
   }
 
   .name-and-tags__decal {
-    height: 10px;
+    height: 5px;
     background-color: blue;
     width: 10%;
     margin-bottom: 12px;
@@ -370,10 +446,16 @@ nav {
   border: 1px solid #d9d9d9;
   text-align: center;
   padding: 20px;
+
+  @media (max-width: 576px) {
+    margin: 12px 0;
+  }
+
   .also-like__image {
     height: 200px;
     margin-bottom: 24px;
   }
+
   .also-like__name {
     font-weight: bold;
     color: #7c7c8f;

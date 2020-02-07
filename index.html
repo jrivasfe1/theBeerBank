@@ -51,8 +51,8 @@
         <section class="beerlist" id="beerList">
             <div class="container">
                 <div class="row row-flex" id="allBeers">
-                    <!-- <div class="col-lg-4 col-md-6">
-                        <a href="">
+                    <!-- <div onclick="openModal()" class="col-lg-4 col-md-6">
+                        <button class="modalopener" id="modalOpener">
                             <div class="beer-card">
                                 <div class="beer-card__header">
                                     <span class="beer-card__favorite beer-card__favorite--starOff">
@@ -71,19 +71,19 @@
                                     </p>
                                 </div>
                             </div>
-                        </a>
+                        </button>
                     </div> -->
                 </div>
             </div>
         </section>
     </main>
 
-    <div id="myModal" class="mymodal">
-        <div class="modal-content">
-            <div class="close">X</div>
+    <div id="myModal" class="mymodal" display="block">
+        <div class="modal-content" id="modalContent">
+            <span class="close"><img src="img/close.svg" alt=""></span>
             <div class="row">
                 <div class="col-md-3">
-                    <div class="img-modal">
+                    <div class="img-modal" id="imgModal">
                         <img class="img-modal__beer" src="https://images.punkapi.com/v2/keg.png" alt="">
                     </div>
                 </div>
@@ -106,10 +106,6 @@
                             exercitationem saepe delectus sequi
                             neque error. Voluptas laboriosam voluptate quos nulla optio obcaecati consectetur saepe
                             perspiciatis sint. Quibusdam quae cumque nesciunt!</p>
-                        <p class="description-parragraf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Veritatis itaque laudantium dolorum
-                            soluta quos earum. Beatae ut impedit totam id doloremque harum, similique ipsam? Magnam
-                            provident sint iusto fugiat nam!</p>
                     </div>
                     <div class="food-pairing">
                         <h4 class="food-pairing__title"><b>Best served with:</b></h4>

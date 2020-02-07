@@ -25,9 +25,8 @@ function addBeer() {
       for (i = 0; i < 6; i++) {
         var col = document.createElement('div');
         col.classList.add("col-lg-4", "col-md-6");
-        allBeers.appendChild(col);
         var beerCard =
-          '<a href=' + data[i].image_url + ' >' +
+          '<button onclick="openModal()" class="modalopener" id="modalOpener">' +
           '<div class="beer-card">' +
           '<div class="beer-card__header">' +
           '<span class="beer-card__favorite beer-card__favorite--starOff">' +
@@ -45,17 +44,17 @@ function addBeer() {
           '<p class="beer-card__description">  ' +
           data[i].tagline + '</p>' +
           '</div>  ' +
-          '</div>  '; +
-        '</a>'
+          '</div>  ' +
+          '</button>'
         col.innerHTML = beerCard;
         allBeers.appendChild(col);
+
       }
     }
-  };
+  }
 }
 
 addBeer();
-
 
 // event Listener, it detecs the scrolbar
 
@@ -66,3 +65,24 @@ addElementToList.addEventListener('scroll', function () {
     addBeer()
   }
 });
+
+// MODAL OPENER
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementsByClassName("modalopener");
+var span = document.getElementsByClassName("close")[0];
+
+function openModal() {
+  modal.style.display = "block";
+}
+
+span.onclick = function () {
+  modal.style.display = "none";
+  console.log(data)
+}
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

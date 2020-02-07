@@ -95,7 +95,18 @@ nav {
   display: block;
 }
 
-.beerlist a:hover {
+.beerlist button {
+  width: 100%;
+  padding: 0;
+  border: none;
+  margin-bottom: 24px;
+}
+
+.beerlist button:focus {
+  outline: none;
+}
+
+.beerlist button:hover {
   text-decoration: none;
 }
 
@@ -106,10 +117,14 @@ nav {
   -webkit-box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
   padding: 24px;
-  margin-bottom: 24px;
   height: 326px;
   opacity: 0.9;
   position: relative;
+}
+
+.beerlist .beer-card button {
+  width: 100%;
+  display: block;
 }
 
 .beerlist .beer-card:hover {
@@ -218,6 +233,28 @@ nav {
   margin: 0;
 }
 
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
 .mymodal {
   display: none;
   position: fixed;
@@ -229,6 +266,10 @@ nav {
   overflow: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-animation-name: animatetop;
+          animation-name: animatetop;
 }
 
 .mymodal .modal-content {
@@ -245,6 +286,24 @@ nav {
   animation-name: animatetop;
   animation-duration: 0.4s;
   overflow-y: auto;
+  position: relative;
+}
+
+.mymodal .modal-content .close {
+  width: 12px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.mymodal .modal-content .close img {
+  width: 12px;
+}
+
+@media (max-width: 768px) {
+  .mymodal .modal-content {
+    width: 100%;
+  }
 }
 
 .mymodal .close {
@@ -281,6 +340,12 @@ nav {
   text-align: center;
 }
 
+@media (max-width: 576px) {
+  .img-modal {
+    margin: 12px 0;
+  }
+}
+
 .img-modal .img-modal__beer {
   height: 350px;
 }
@@ -302,7 +367,7 @@ nav {
 }
 
 .name-and-tags .name-and-tags__decal {
-  height: 10px;
+  height: 5px;
   background-color: blue;
   width: 10%;
   margin-bottom: 12px;
@@ -357,6 +422,12 @@ nav {
   border: 1px solid #d9d9d9;
   text-align: center;
   padding: 20px;
+}
+
+@media (max-width: 576px) {
+  .also-like__box {
+    margin: 12px 0;
+  }
 }
 
 .also-like__box .also-like__image {
