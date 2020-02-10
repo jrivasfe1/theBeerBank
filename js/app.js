@@ -48,7 +48,7 @@ function addBeer() {
           '</button>'
         col.innerHTML = beerCard;
         allBeers.appendChild(col);
-        window.onscroll = function() {
+        window.onscroll = function () {
           if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             for (i = 0; i < data.length; i++) {
               var col = document.createElement('div');
@@ -57,7 +57,7 @@ function addBeer() {
                 '<button onclick="openModal()" class="modalopener" id="modalOpener">' +
                 '<div class="beer-card">' +
                 '<div class="beer-card__header">' +
-                '<span class="beer-card__favorite beer-card__favorite--starOff">' +
+                '<span onclick="starOnAndOff()" class="beer-card__favorite beer-card__favorite--starOff">' +
                 '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' +
                 '<polygon points="12,3 6,21 21,9 3,9 18,21" />' +
                 '</svg>' +
@@ -106,4 +106,28 @@ window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+// start toogle
+
+var star = document.getElementsByClassName('beer-card__favorite')
+
+function classToggle() {
+  this.classList.toggle('beer-card__favorite--starOff');
+  this.classList.toggle('beer-card__favorite--starOn');
+}
+
+if (star) {
+  star.addEventListener('click', classToggle);
+}
+
+
+
+
+document.querySelector(".beer-card__favorite").addEventListener('click', starOnAndOff);
+
+
+// this will execure stuff after document loaded
+window.onload = function () {
+
 }
