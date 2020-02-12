@@ -120,11 +120,13 @@ nav {
   height: 326px;
   opacity: 0.9;
   position: relative;
+  margin-bottom: 24px;
 }
 
 .beerlist .beer-card button {
   width: 100%;
   display: block;
+  background-color: none;
 }
 
 .beerlist .beer-card:hover {
@@ -147,8 +149,8 @@ nav {
 }
 
 .beerlist .beer-card .beer-card__favorite.beer-card__favorite--starOff polygon {
-  fill: #f1f1f1;
-  stroke: #f1f1f1;
+  fill: #adadad;
+  stroke: #adadad;
   stroke-linejoin: round;
 }
 
@@ -225,6 +227,8 @@ nav {
   font-weight: bold;
   color: #f89900;
   height: 56px;
+  background-color: transparent;
+  line-height: normal;
 }
 
 .beerlist .beer-card .beer-card__body .beer-card__description {
@@ -287,6 +291,7 @@ nav {
   animation-duration: 0.4s;
   overflow-y: auto;
   position: relative;
+  height: 100%;
 }
 
 .mymodal .modal-content .close {

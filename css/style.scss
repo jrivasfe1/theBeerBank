@@ -24,7 +24,7 @@
 // BEM practice
 
 $primary-color: #f89900;
-$starGray: #f1f1f1;
+$starGray: #adadad;
 $stardOrange: #f89900;
 $stardOrangeLight: lighten($stardOrange, 1%);
 $stardOrangeLighter: lighten($stardOrange, 30%);
@@ -147,10 +147,11 @@ nav {
     height: 326px;
     opacity: 0.9;
     position: relative;
-
+    margin-bottom: 24px;
     button {
       width: 100%;
       display: block;
+      background-color: none;
     }
 
     &:hover {
@@ -255,6 +256,8 @@ nav {
         font-weight: bold;
         color: $primary-color;
         height: 56px;
+        background-color: transparent;
+        line-height: normal;
       }
 
       .beer-card__description {
@@ -269,12 +272,12 @@ nav {
 @keyframes animatetop {
   from {
     top: -300px;
-    opacity: 0
+    opacity: 0;
   }
 
   to {
     top: 0;
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -341,8 +344,6 @@ nav {
 
       .also-like__box {
         border: 1px solid $primary-color;
-
-
 
         .also-like__name {
           font-weight: bold;
