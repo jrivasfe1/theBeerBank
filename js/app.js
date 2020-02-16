@@ -57,6 +57,7 @@ function renderElements() {
     col.innerHTML = beerCard;
     allBeers.appendChild(col);
 
+    
 
 
   }
@@ -70,6 +71,7 @@ function renderElements() {
     })
   })
 
+  
 }
 
 window.onscroll = function () {
@@ -112,9 +114,8 @@ function openModal() {
   modal.style.display = "block";
 }
 
-span.onclick = function () {
+function closeModal(){
   modal.style.display = "none";
-  console.log(data)
 }
 
 window.onclick = function (event) {
@@ -137,10 +138,11 @@ function searchBeer() {
   }
 }
 
-function addModal() {
+function addModal(allBeers) {
+  console.log(data)
   for (i = 0; i < data.length; i++) {
     var modalContent = document.querySelector('#modalContent');
-    var innderModal = '<span class="close"><img src="img/close.svg" alt=""></span>' +
+    var innderModal = '<span onclick="closeModal()" class="close"><img src="img/close.svg" alt=""></span>' +
       '            <div class="row">' +
       '                <div class="col-md-3">' +
       '                    <div class="img-modal" id="imgModal">' +
